@@ -1,0 +1,430 @@
+/* =========================================================
+   Smile School — styles.css
+   NOTE: colors, fonts and exact spacing below are placeholders.
+   Open the Figma file and replace the values marked with a
+   comment before treating this as final.
+   ========================================================= */
+
+:root {
+	--color-purple: #6c5ce7;       /* TODO: replace with exact Figma purple */
+	--color-purple-dark: #5a4bd4;
+	--color-text: #2d2d2d;
+	--color-white: #ffffff;
+	--color-bg-light: #f7f5ff;
+	--font-heading: "Spin Cycle OT", "Source Sans Pro", Arial, sans-serif;
+	--font-body: "Source Sans Pro", Arial, sans-serif;
+	--container-width: 1100px;
+}
+
+body {
+	font-family: var(--font-body);
+	color: var(--color-text);
+}
+
+.container {
+	max-width: var(--container-width);
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+.btn {
+	display: inline-block;
+	background-color: var(--color-purple);
+	color: var(--color-white);
+	border: none;
+	border-radius: 30px;
+	padding: 14px 32px;
+	font-size: 16px;
+	font-weight: bold;
+	box-shadow: 0 6px 14px rgba(108, 92, 231, 0.35);
+	cursor: pointer;
+}
+
+/* =========================================================
+   Header
+   ========================================================= */
+.header {
+	max-width: var(--container-width);
+	margin: 0 auto;
+	padding: 20px;
+}
+
+.header-container {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 40px;
+}
+
+.header-logo {
+	margin-right: auto;
+}
+
+.header-logo a {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	text-decoration: none;
+}
+
+.header-logo img {
+	height: 32px;
+}
+
+.logo-text {
+	color: var(--color-white);
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.header-links {
+	display: flex;
+	gap: 24px;
+}
+
+.header-links a {
+	color: var(--color-white);
+	text-decoration: none;
+	font-size: 15px;
+}
+
+/* =========================================================
+   Banner / Hero
+   ========================================================= */
+.banner {
+	background-image: url("images/hero-background.jpg"); /* TODO: replace with real background asset */
+	background-size: cover;
+	background-position: center;
+}
+
+.banner-hero {
+	max-width: 600px;
+	margin: 0 auto;
+	padding: 60px 20px 80px;
+	text-align: center;
+}
+
+.banner-hero h1 {
+	color: var(--color-white);
+	font-family: var(--font-heading);
+	font-size: 48px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.banner-hero p {
+	color: var(--color-white);
+	font-size: 18px;
+	line-height: 1.6;
+	margin-bottom: 30px;
+}
+
+.banner-features {
+	background-color: var(--color-white);
+	padding: 60px 20px;
+	text-align: center;
+}
+
+.banner-features h2 {
+	color: var(--color-text);
+	font-size: 28px;
+	margin-bottom: 40px;
+}
+
+.feature-list {
+	max-width: var(--container-width);
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	gap: 30px;
+	flex-wrap: wrap;
+}
+
+.feature-item {
+	flex: 1 1 200px;
+	max-width: 220px;
+}
+
+.feature-item img {
+	width: 60px;
+	height: 60px;
+	margin-bottom: 16px;
+}
+
+.feature-item h3 {
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+
+.feature-item p {
+	font-size: 14px;
+	color: #666;
+}
+
+/* =========================================================
+   Quote
+   ========================================================= */
+.quote {
+	background-color: var(--color-purple);
+	padding: 60px 20px;
+}
+
+.quote-container {
+	max-width: var(--container-width);
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	gap: 30px;
+}
+
+.quote-image {
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	object-fit: cover;
+	flex-shrink: 0;
+}
+
+.quote-text blockquote {
+	color: var(--color-white);
+	font-size: 22px;
+	font-style: italic;
+	margin: 0 0 16px;
+}
+
+.quote-author {
+	color: var(--color-white);
+	font-weight: bold;
+	margin: 0;
+}
+
+.quote-title {
+	color: var(--color-white);
+	font-style: italic;
+	margin: 0;
+}
+
+/* =========================================================
+   Videos
+   ========================================================= */
+.videos {
+	background-color: var(--color-white);
+	padding: 60px 20px;
+	text-align: center;
+}
+
+.videos h1 {
+	color: var(--color-purple);
+	font-size: 32px;
+	margin-bottom: 40px;
+}
+
+.video-list {
+	max-width: var(--container-width);
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	gap: 24px;
+	flex-wrap: wrap;
+	text-align: left;
+}
+
+.video-item {
+	flex: 1 1 240px;
+	max-width: 260px;
+	border-radius: 12px;
+	overflow: hidden;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.video-item img:first-child {
+	width: 100%;
+	height: 150px;
+	object-fit: cover;
+	background-image: url("images/play-icon.png"); /* TODO: replace with real player-icon overlay */
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.video-item h2 {
+	font-size: 16px;
+	margin: 12px 16px 6px;
+}
+
+.video-item p {
+	font-size: 13px;
+	color: #666;
+	margin: 0 16px 12px;
+}
+
+.video-author {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	margin: 0 16px 12px;
+}
+
+.video-author img {
+	width: 28px;
+	height: 28px;
+	border-radius: 50%;
+}
+
+.video-author h3 {
+	font-size: 13px;
+	color: var(--color-purple);
+	margin: 0;
+}
+
+.video-rating {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 16px 16px;
+}
+
+.stars {
+	display: flex;
+	gap: 2px;
+}
+
+.stars img {
+	width: 14px;
+	height: 14px;
+}
+
+.video-rating p {
+	color: var(--color-purple);
+	font-size: 12px;
+	margin: 0;
+}
+
+/* =========================================================
+   Membership
+   ========================================================= */
+.membership {
+	background-color: var(--color-bg-light);
+	padding: 60px 20px;
+	text-align: center;
+}
+
+.membership h1 {
+	color: var(--color-purple);
+	font-size: 32px;
+	margin-bottom: 40px;
+}
+
+.membership-list {
+	max-width: var(--container-width);
+	margin: 0 auto 40px;
+	display: flex;
+	justify-content: center;
+	gap: 30px;
+	flex-wrap: wrap;
+}
+
+.membership-item {
+	flex: 1 1 200px;
+	max-width: 220px;
+}
+
+.membership-item img {
+	width: 48px;
+	height: 48px;
+	margin-bottom: 16px;
+	filter: brightness(0) saturate(100%) invert(38%) sepia(84%) saturate(1826%) hue-rotate(226deg); /* TODO: replace with a purple icon asset directly */
+}
+
+.membership-item h2 {
+	font-size: 18px;
+	margin-bottom: 8px;
+}
+
+.membership-item p {
+	font-size: 14px;
+	color: #666;
+}
+
+/* =========================================================
+   FAQ
+   ========================================================= */
+.faq {
+	background-color: var(--color-white);
+	padding: 60px 20px;
+	text-align: center;
+}
+
+.faq h1 {
+	color: var(--color-text);
+	font-size: 32px;
+	margin-bottom: 40px;
+}
+
+.faq-container {
+	max-width: 800px;
+	margin: 0 auto;
+	text-align: left;
+}
+
+.faq-row {
+	display: flex;
+	gap: 40px;
+	margin-bottom: 30px;
+	flex-wrap: wrap;
+}
+
+.faq-item {
+	flex: 1 1 300px;
+}
+
+.faq-item h2 {
+	font-size: 17px;
+	margin-bottom: 8px;
+}
+
+.faq-item p {
+	font-size: 14px;
+	color: #666;
+	line-height: 1.5;
+}
+
+/* =========================================================
+   Footer
+   ========================================================= */
+.footer {
+	background-color: var(--color-text);
+	padding: 30px 20px;
+}
+
+.footer-container {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.footer-row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.footer-logo {
+	height: 28px;
+}
+
+.footer-links {
+	display: flex;
+	gap: 16px;
+}
+
+.footer-links img {
+	width: 20px;
+	height: 20px;
+}
+
+.footer-copyright {
+	color: #aaa;
+	font-size: 13px;
+	text-align: center;
+	margin: 0;
+}
